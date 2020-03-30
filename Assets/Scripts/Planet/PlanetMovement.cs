@@ -9,8 +9,6 @@ public class PlanetMovement : MonoBehaviour
     private bool _canLaunchRotation;
     private Vector3 _targetRotation;
 
-    private float t = 0f;
-
     private void Start()
     {
         _rotate = false;
