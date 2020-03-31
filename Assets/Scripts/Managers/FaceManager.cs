@@ -4,6 +4,12 @@ public class FaceManager : MonoBehaviour
 {
     [HideInInspector] public Transform actualFace { get; private set;}
     public GameObject uiFace;
+
+    private void Start()
+    {
+        uiFace.SetActive(false);
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.GetComponent<FaceRotation>())

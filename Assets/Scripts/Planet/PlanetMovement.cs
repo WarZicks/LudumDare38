@@ -27,8 +27,10 @@ public class PlanetMovement : MonoBehaviour
             return;
 
         _targetRotation = new Vector3(this.transform.localEulerAngles.x + direction.x, this.transform.localEulerAngles.y + direction.y, this.transform.localEulerAngles.z + direction.z);
-        _rotate = true;
-        _canLaunchRotation = false;
+        //_rotate = true;
+        //_canLaunchRotation = false;
+        StartCoroutine(Rotate(direction, .5f));
+
     }
 
     private void RotateToNewRotation()
@@ -40,5 +42,19 @@ public class PlanetMovement : MonoBehaviour
             _canLaunchRotation = true;
             _rotate = false;
         }
+    }
+
+    private IEnumerator Rotate(Vector3 angles, float duration)
+    {
+        _rotate = true;
+        Quaternion startRotation = transform.rotation;
+        Quaternion endRotation = Quaternion.Euler(angles) * startRotation;
+        for (float t = 0; t < duration; t += Time.deltaTime)
+        {
+            transform.rotation = Quaternion.Lerp(startRotation, endRotation, t / duration);
+            yield return null;
+        }
+        transform.rotation = endRotation;
+        _rotate = false;
     }
 }

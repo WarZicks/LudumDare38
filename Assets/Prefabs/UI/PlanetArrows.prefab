@@ -323,7 +323,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46a70a529d16c9349a7a83175bdf4d9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _direction: {x: 0, y: 0, z: 90}
+  _direction: {x: 0, y: 0, z: -90}
   _planet: {fileID: 0}
 --- !u!1 &6337982970157937213
 GameObject:
@@ -466,7 +466,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46a70a529d16c9349a7a83175bdf4d9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _direction: {x: 0, y: 0, z: -90}
+  _direction: {x: 0, y: 0, z: 90}
   _planet: {fileID: 0}
 --- !u!1 &6337982970300236002
 GameObject:
