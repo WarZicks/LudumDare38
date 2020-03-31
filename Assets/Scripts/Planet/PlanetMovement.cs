@@ -7,11 +7,12 @@ public class PlanetMovement : MonoBehaviour
     [SerializeField] private float _lerpTime = .5f;
     private bool _rotate;
     private bool _canLaunchRotation;
-    public GameObject rotationManager;
+    private FaceManager rotationManager;
     public bool canRotateCube;
 
     private void Start()
     {
+        rotationManager = GameObject.FindObjectOfType<FaceManager>();
         canRotateCube = true;
         _rotate = false;
         _canLaunchRotation = true;
@@ -31,7 +32,7 @@ public class PlanetMovement : MonoBehaviour
 
     private IEnumerator Rotate(Vector3 angles, float duration)
     {
-        rotationManager.GetComponent<FaceManager>().canRotate = false;
+        rotationManager.canRotate = false;
         _rotate = true;
         Quaternion startRotation = transform.rotation;
         Quaternion endRotation = Quaternion.Euler(angles) * startRotation;
@@ -43,6 +44,6 @@ public class PlanetMovement : MonoBehaviour
         transform.rotation = endRotation;
         _rotate = false;
         _canLaunchRotation = true;
-        rotationManager.GetComponent<FaceManager>().canRotate = true;
+        rotationManager.canRotate = true;
     }
 }

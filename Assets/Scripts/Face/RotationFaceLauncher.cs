@@ -6,12 +6,12 @@ public class RotationFaceLauncher : MonoBehaviour
 {
     [SerializeField] private FaceManager faceManager;
     [SerializeField] private Vector3 rotationDirection;
-    public GameObject Planet;
+    private PlanetMovement Planet;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        Planet = GameObject.FindObjectOfType<PlanetMovement>();
     }
 
     // Update is called once per frame
@@ -21,7 +21,7 @@ public class RotationFaceLauncher : MonoBehaviour
     }
     public void launchRotation()
     {
-        Planet.GetComponent<PlanetMovement>().canRotateCube = false;
+        Planet.canRotateCube = false;
         faceManager.actualFace.GetComponent<FaceRotation>().LaunchRotation(rotationDirection);
     }
     
