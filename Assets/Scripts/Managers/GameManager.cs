@@ -3,9 +3,10 @@
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-
     private int _endWayCount;
     public int _endWayActivated { get; private set;}
+
+    public event System.Action onWin;
 
     private void Awake()
     {
@@ -32,5 +33,6 @@ public class GameManager : MonoBehaviour
     private void Win()
     {
         Debug.Log("Win !");
+        onWin?.Invoke();
     }
 }

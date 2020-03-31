@@ -667,7 +667,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 143132e9c96db6744a5616ed2f550a0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _lerpSpeed: 2
+  _lerpSpeed: 10
 --- !u!1 &206304627285664563
 GameObject:
   m_ObjectHideFlags: 0
@@ -774,7 +774,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 143132e9c96db6744a5616ed2f550a0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _lerpSpeed: 2
+  _lerpSpeed: 10
 --- !u!1 &206304627288710716
 GameObject:
   m_ObjectHideFlags: 0
@@ -883,7 +883,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 143132e9c96db6744a5616ed2f550a0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _lerpSpeed: 2
+  _lerpSpeed: 10
 --- !u!1 &206304627595122928
 GameObject:
   m_ObjectHideFlags: 0
@@ -990,7 +990,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 143132e9c96db6744a5616ed2f550a0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _lerpSpeed: 2
+  _lerpSpeed: 10
 --- !u!1 &206304627958326472
 GameObject:
   m_ObjectHideFlags: 0
@@ -1147,7 +1147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 143132e9c96db6744a5616ed2f550a0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _lerpSpeed: 2
+  _lerpSpeed: 10
 --- !u!1 &206304628720231221
 GameObject:
   m_ObjectHideFlags: 0
@@ -1255,7 +1255,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 143132e9c96db6744a5616ed2f550a0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _lerpSpeed: 2
+  _lerpSpeed: 10
 --- !u!1001 &2882142091268673179
 PrefabInstance:
   m_ObjectHideFlags: 0

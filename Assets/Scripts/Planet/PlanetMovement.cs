@@ -26,17 +26,19 @@ public class PlanetMovement : MonoBehaviour
         if (!_canLaunchRotation)
             return;
 
-        _targetRotation = new Vector3(this.transform.eulerAngles.x + direction.x, this.transform.eulerAngles.y + direction.y, this.transform.eulerAngles.z + direction.z);
+        _targetRotation = new Vector3(this.transform.localEulerAngles.x + direction.x, this.transform.localEulerAngles.y + direction.y, this.transform.localEulerAngles.z + direction.z);
         _rotate = true;
         _canLaunchRotation = false;
-
     }
 
     private void RotateToNewRotation()
     {
-        transform.rotation = Quaternion.Slerp(this.transform.rotation, Quaternion.Euler(_targetRotation), _lerpSpeed * Time.deltaTime);
+        transform.localRotation = Quaternion.Slerp(transform.localRotation, Quaternion.Euler(_targetRotation), _lerpSpeed * Time.deltaTime);
 
         if (Quaternion.Angle(this.transform.rotation, Quaternion.Euler(_targetRotation)) < .1f)
+        {
             _canLaunchRotation = true;
+            _rotate = false;
+        }
     }
 }
