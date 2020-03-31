@@ -19,6 +19,7 @@ public class RotationFaceLauncher : MonoBehaviour
     }
     public void launchRotation()
     {
+        Debug.Log("isWorking");
         faceManager.actualFace.GetComponent<FaceRotation>().LaunchRotation(rotationDirection);
     }
     
