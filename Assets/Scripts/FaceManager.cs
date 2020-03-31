@@ -1,19 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class FaceManager : MonoBehaviour
 {
-    public Transform actualFace;
+    [HideInInspector] public Transform actualFace { get; private set;}
     private void OnTriggerEnter(Collider other)
     {
         if (other.GetComponent<FaceRotation>())
-        {
             actualFace = other.transform;
-        }
-        
-
-
     }
     private void OnMouseOver()
     {
