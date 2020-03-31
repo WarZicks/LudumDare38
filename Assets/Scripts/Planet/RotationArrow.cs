@@ -3,7 +3,12 @@
 public class RotationArrow : MonoBehaviour
 {
     [SerializeField] private Vector3 _direction;
-    [SerializeField] private PlanetMovement _planet;
+    private PlanetMovement _planet;
+
+    private void Start()
+    {
+        _planet = GameObject.FindObjectOfType<PlanetMovement>();
+    }
 
     public void OnClick()
     {
