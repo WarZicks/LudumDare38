@@ -6,15 +6,12 @@ public class GameManager : MonoBehaviour
     private int _endWayCount;
     public int _endWayActivated { get; private set;}
 
+    public event System.Action onUpdateEndWay;
     public event System.Action onWin;
 
     private void Awake()
     {
         instance = this;
-    }
-
-    private void Start()
-    {
         _endWayCount = GameObject.FindObjectsOfType<EndWayCollision>().Length;
     }
 
@@ -22,6 +19,7 @@ public class GameManager : MonoBehaviour
     {
         _endWayActivated += amount;
         CheckEndWayCount();
+        onUpdateEndWay?.Invoke();
     }
 
     private void CheckEndWayCount()
