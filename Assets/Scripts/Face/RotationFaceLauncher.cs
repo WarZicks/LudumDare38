@@ -6,6 +6,7 @@ public class RotationFaceLauncher : MonoBehaviour
 {
     [SerializeField] private FaceManager faceManager;
     [SerializeField] private Vector3 rotationDirection;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +20,7 @@ public class RotationFaceLauncher : MonoBehaviour
     }
     public void launchRotation()
     {
-        Debug.Log("isWorking");
+        
         faceManager.actualFace.GetComponent<FaceRotation>().LaunchRotation(rotationDirection);
     }
     
