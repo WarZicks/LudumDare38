@@ -37,6 +37,9 @@ public class FaceRotation : MonoBehaviour
         transform.rotation = Quaternion.Slerp(this.transform.rotation, Quaternion.Euler(_targetRotation), _lerpSpeed * Time.deltaTime);
 
         if (Quaternion.Angle(this.transform.rotation, Quaternion.Euler(_targetRotation)) < .1f)
+        {
             _canLaunchRotation = true;
+            _rotate = false;
+        }
     }
 }

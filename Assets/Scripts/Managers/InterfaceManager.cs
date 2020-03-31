@@ -6,10 +6,17 @@ public class InterfaceManager : MonoBehaviour
 {
     [Header("Referencies")]
     [SerializeField] private GameObject _winMenu;
+    [SerializeField] private GameObject _planetArrows;
 
     private void Start()
     {
-        GameManager.instance.onWin += () => ActiveObject(_winMenu, true, .5f);
+        GameManager.instance.onWin += () => Win();
+    }
+
+    private void Win()
+    {
+        ActiveObject(_winMenu, true, .5f);
+        ActiveObject(_planetArrows, false, .5f);
     }
 
     public void ActiveObject(GameObject go, bool active, float delay = 0f)
