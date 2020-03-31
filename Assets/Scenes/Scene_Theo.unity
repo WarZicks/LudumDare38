@@ -141,7 +141,7 @@ PrefabInstance:
     - target: {fileID: 4998644601995220250, guid: 9bcedd4c270d19b489a17f1ba47e5112,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.34
+      value: 5.24
       objectReference: {fileID: 0}
     - target: {fileID: 4998644601995220250, guid: 9bcedd4c270d19b489a17f1ba47e5112,
         type: 3}
@@ -188,11 +188,31 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4998644601995220250, guid: 9bcedd4c270d19b489a17f1ba47e5112,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 5.500142
+      objectReference: {fileID: 0}
+    - target: {fileID: 4998644601995220250, guid: 9bcedd4c270d19b489a17f1ba47e5112,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 6.1937685
+      objectReference: {fileID: 0}
+    - target: {fileID: 4998644601995220250, guid: 9bcedd4c270d19b489a17f1ba47e5112,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.67613125
+      objectReference: {fileID: 0}
     - target: {fileID: 4998644601995220251, guid: 9bcedd4c270d19b489a17f1ba47e5112,
         type: 3}
       propertyPath: uiFace
       value: 
       objectReference: {fileID: 1491948516}
+    - target: {fileID: 4998644601995220251, guid: 9bcedd4c270d19b489a17f1ba47e5112,
+        type: 3}
+      propertyPath: canRotate
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9bcedd4c270d19b489a17f1ba47e5112, type: 3}
 --- !u!1 &189529576
@@ -310,6 +330,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _winMenu: {fileID: 1752770729}
   _planetArrows: {fileID: 975481905}
+--- !u!1 &212799513 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6061587539686266428, guid: d5795f2d044e0a842901970683361355,
+    type: 3}
+  m_PrefabInstance: {fileID: 844301156}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &469145588 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4998644601995220249, guid: 9bcedd4c270d19b489a17f1ba47e5112,
+    type: 3}
+  m_PrefabInstance: {fileID: 89841882}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &477805428
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -322,11 +354,21 @@ PrefabInstance:
       propertyPath: faceManager
       value: 
       objectReference: {fileID: 1281060987}
+    - target: {fileID: 5945556046237419020, guid: c4cb7c8cd6ba1c34a9f634c6e8ba7902,
+        type: 3}
+      propertyPath: Planet
+      value: 
+      objectReference: {fileID: 212799513}
     - target: {fileID: 5945556047048790142, guid: c4cb7c8cd6ba1c34a9f634c6e8ba7902,
         type: 3}
       propertyPath: faceManager
       value: 
       objectReference: {fileID: 1281060987}
+    - target: {fileID: 5945556047048790142, guid: c4cb7c8cd6ba1c34a9f634c6e8ba7902,
+        type: 3}
+      propertyPath: Planet
+      value: 
+      objectReference: {fileID: 212799513}
     - target: {fileID: 5945556047284578530, guid: c4cb7c8cd6ba1c34a9f634c6e8ba7902,
         type: 3}
       propertyPath: m_Name
@@ -674,6 +716,21 @@ PrefabInstance:
       propertyPath: _lerpSpeed
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 6252092732806468802, guid: d5795f2d044e0a842901970683361355,
+        type: 3}
+      propertyPath: RotationManager
+      value: 
+      objectReference: {fileID: 469145588}
+    - target: {fileID: 6252092732806468802, guid: d5795f2d044e0a842901970683361355,
+        type: 3}
+      propertyPath: rotationManager
+      value: 
+      objectReference: {fileID: 469145588}
+    - target: {fileID: 6479709396542337223, guid: d5795f2d044e0a842901970683361355,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5795f2d044e0a842901970683361355, type: 3}
 --- !u!114 &889500196 stripped
@@ -682,7 +739,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 844301156}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 212799513}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7207ea51727cbaf49b1be626af5981b6, type: 3}
@@ -749,7 +806,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 89841882}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 469145588}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5bedcb391b2e1164faab219d4ec07f35, type: 3}
