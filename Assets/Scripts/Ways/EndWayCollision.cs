@@ -2,6 +2,16 @@
 
 public class EndWayCollision : MonoBehaviour
 {
+    public EndWayStep _step;
+
+    private void Start()
+    {
+        if (_step == EndWayStep.Zero)
+            gameObject.SetActive(true);
+        else
+            gameObject.SetActive(false);
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if(other.GetComponent<EndWayCollision>())
