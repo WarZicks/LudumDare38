@@ -1,26 +1,19 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 public class FaceRotation : MonoBehaviour
 {
-    [SerializeField] private float _lerpSpeed = 2f;
+    private float _lerpTime = .25f;
     private bool _rotate;
     private bool _canLaunchRotation;
     private Vector3 _targetRotation;
-    private PlanetMovement Planet;
+    private PlanetMovement _planet;
 
     private void Start()
     {
-        Planet = GameObject.FindObjectOfType<PlanetMovement>();
+        _planet = GameObject.FindObjectOfType<PlanetMovement>();
         _rotate = false;
         _canLaunchRotation = true;
-    }
-
-    private void Update()
-    {
-        if (_rotate)
-                RotateToNewRotation();
-
-
     }
 
     public void LaunchRotation(Vector3 direction)
@@ -28,24 +21,25 @@ public class FaceRotation : MonoBehaviour
         if (!_canLaunchRotation)    
             return;
 
-        _targetRotation = new Vector3(this.transform.eulerAngles.x + direction.x, this.transform.eulerAngles.y + direction.y, this.transform.eulerAngles.z + direction.z);
-        _rotate = true;
+        _planet.canRotatePlanet = false;
         _canLaunchRotation = false;
-        
+        StartCoroutine(Rotate(direction, _lerpTime));
 
     }
 
-    private void RotateToNewRotation()
+    private IEnumerator Rotate(Vector3 angles, float duration)
     {
-        
-        transform.rotation = Quaternion.Slerp(this.transform.rotation, Quaternion.Euler(_targetRotation), _lerpSpeed * Time.deltaTime);
-
-        if (Quaternion.Angle(this.transform.rotation, Quaternion.Euler(_targetRotation)) < .1f)
+        _rotate = true;
+        Quaternion startRotation = transform.rotation;
+        Quaternion endRotation = Quaternion.Euler(angles) * startRotation;
+        for (float t = 0; t < duration; t += Time.deltaTime)
         {
-            _canLaunchRotation = true;
-            _rotate = false;
-            Planet.canRotateCube = true;
-            
+            transform.rotation = Quaternion.Lerp(startRotation, endRotation, t / duration);
+            yield return null;
         }
+        transform.rotation = endRotation;
+        _rotate = false;
+        _canLaunchRotation = true;
+        _planet.canRotatePlanet = true;
     }
 }

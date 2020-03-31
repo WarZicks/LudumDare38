@@ -8,12 +8,12 @@ public class PlanetMovement : MonoBehaviour
     private bool _rotate;
     private bool _canLaunchRotation;
     private FaceManager rotationManager;
-    public bool canRotateCube;
+    [HideInInspector] public bool canRotatePlanet;
 
     private void Start()
     {
         rotationManager = GameObject.FindObjectOfType<FaceManager>();
-        canRotateCube = true;
+        canRotatePlanet = true;
         _rotate = false;
         _canLaunchRotation = true;
     }
@@ -23,7 +23,7 @@ public class PlanetMovement : MonoBehaviour
             return;
 
         _canLaunchRotation = false;
-        if (canRotateCube)
+        if (canRotatePlanet)
         {
             StartCoroutine(Rotate(direction, _lerpTime));
         }  

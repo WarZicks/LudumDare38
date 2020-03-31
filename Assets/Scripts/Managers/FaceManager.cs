@@ -2,15 +2,15 @@
 
 public class FaceManager : MonoBehaviour
 {
-     public Transform actualFace { get; private set;}
-    public GameObject uiFace;
-    public bool canRotate = true;
+    public Transform actualFace { get; private set;}
+    public GameObject faceUI;
+    [HideInInspector] public bool canRotate = true;
     
 
     private void Start()
     {
         canRotate = true;
-        uiFace.SetActive(false);
+        faceUI.SetActive(false);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -22,13 +22,13 @@ public class FaceManager : MonoBehaviour
     {
         if (canRotate)
         {
-            uiFace.SetActive(true);
+            faceUI.SetActive(true);
         }
         
 
     }
     private void OnMouseExit()
     {
-        uiFace.SetActive(false);
+        faceUI.SetActive(false);
     }
 }

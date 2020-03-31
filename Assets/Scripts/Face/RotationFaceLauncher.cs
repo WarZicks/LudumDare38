@@ -21,7 +21,7 @@ public class RotationFaceLauncher : MonoBehaviour
     }
     public void launchRotation()
     {
-        Planet.canRotateCube = false;
+        Planet.canRotatePlanet = false;
         faceManager.actualFace.GetComponent<FaceRotation>().LaunchRotation(rotationDirection);
     }
     
