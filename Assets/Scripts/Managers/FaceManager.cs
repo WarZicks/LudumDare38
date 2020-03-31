@@ -2,11 +2,14 @@
 
 public class FaceManager : MonoBehaviour
 {
-    [HideInInspector] public Transform actualFace { get; private set;}
+     public Transform actualFace { get; private set;}
     public GameObject uiFace;
+    public bool canRotate = true;
+    
 
     private void Start()
     {
+        canRotate = true;
         uiFace.SetActive(false);
     }
 
@@ -17,7 +20,11 @@ public class FaceManager : MonoBehaviour
     }
     private void OnMouseOver()
     {
-        uiFace.SetActive(true);
+        if (canRotate)
+        {
+            uiFace.SetActive(true);
+        }
+        
 
     }
     private void OnMouseExit()
