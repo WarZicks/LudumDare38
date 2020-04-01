@@ -364,6 +364,21 @@ PrefabInstance:
       propertyPath: Planet
       value: 
       objectReference: {fileID: 212799513}
+    - target: {fileID: 5945556046237419020, guid: c4cb7c8cd6ba1c34a9f634c6e8ba7902,
+        type: 3}
+      propertyPath: speed
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5945556046237419020, guid: c4cb7c8cd6ba1c34a9f634c6e8ba7902,
+        type: 3}
+      propertyPath: scaleSpeed
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5945556046237419020, guid: c4cb7c8cd6ba1c34a9f634c6e8ba7902,
+        type: 3}
+      propertyPath: specificXscale
+      value: -0.7
+      objectReference: {fileID: 0}
     - target: {fileID: 5945556047048790142, guid: c4cb7c8cd6ba1c34a9f634c6e8ba7902,
         type: 3}
       propertyPath: faceManager
@@ -374,6 +389,26 @@ PrefabInstance:
       propertyPath: Planet
       value: 
       objectReference: {fileID: 212799513}
+    - target: {fileID: 5945556047048790142, guid: c4cb7c8cd6ba1c34a9f634c6e8ba7902,
+        type: 3}
+      propertyPath: speed
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5945556047048790142, guid: c4cb7c8cd6ba1c34a9f634c6e8ba7902,
+        type: 3}
+      propertyPath: actualScale
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5945556047048790142, guid: c4cb7c8cd6ba1c34a9f634c6e8ba7902,
+        type: 3}
+      propertyPath: scaleSpeed
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5945556047048790142, guid: c4cb7c8cd6ba1c34a9f634c6e8ba7902,
+        type: 3}
+      propertyPath: specificXscale
+      value: 0.7
+      objectReference: {fileID: 0}
     - target: {fileID: 5945556047284578530, guid: c4cb7c8cd6ba1c34a9f634c6e8ba7902,
         type: 3}
       propertyPath: m_Name
@@ -483,6 +518,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5945556047284578534, guid: c4cb7c8cd6ba1c34a9f634c6e8ba7902,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5945556047284578534, guid: c4cb7c8cd6ba1c34a9f634c6e8ba7902,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5945556047284578534, guid: c4cb7c8cd6ba1c34a9f634c6e8ba7902,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4cb7c8cd6ba1c34a9f634c6e8ba7902, type: 3}
@@ -755,6 +805,23 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 477805428}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1491948521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1491948516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a5b1cf5f8ebd58448c91c52c813bab9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0.5
+  scaleSpeed: 0.3
+  actualScaleX: 0
+  actualScaleY: 0
+  actualScaleZ: 0
 --- !u!1 &1752770729 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7174251451206471179, guid: b82a27fbf00d1094583f152241e6db42,

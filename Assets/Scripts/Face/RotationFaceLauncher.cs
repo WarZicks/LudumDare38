@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class RotationFaceLauncher : MonoBehaviour
 {
+    public float speed, scaleSpeed;
+    public float actualScaleX, actualScaleY, actualScaleZ;
+    public float specificXscale;
     [SerializeField] private FaceManager faceManager;
     [SerializeField] private Vector3 rotationDirection;
     private PlanetMovement Planet;
@@ -17,8 +20,9 @@ public class RotationFaceLauncher : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
+
     public void launchRotation()
     {
         Planet.canRotatePlanet = false;

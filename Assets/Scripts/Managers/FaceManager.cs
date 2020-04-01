@@ -30,5 +30,10 @@ public class FaceManager : MonoBehaviour
     private void OnMouseExit()
     {
         faceUI.SetActive(false);
+        faceUI.GetComponent<LerpScale>().scaleSpeed = 0.3f;
+        faceUI.GetComponent<LerpScale>().actualScaleX = 0;
+        faceUI.GetComponent<LerpScale>().actualScaleY = 0;
+        faceUI.GetComponent<LerpScale>().actualScaleZ = 0;
+        faceUI.transform.localScale = new Vector3(0, 0, 0);
     }
 }
