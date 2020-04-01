@@ -23,11 +23,9 @@ public class PlanetMovement : MonoBehaviour
             return;
 
         _canLaunchRotation = false;
-        if (canRotatePlanet)
-        {
-            StartCoroutine(Rotate(direction, _lerpTime));
-        }  
 
+        if (canRotatePlanet)
+            StartCoroutine(Rotate(direction, _lerpTime));
     }
 
     private IEnumerator Rotate(Vector3 angles, float duration)

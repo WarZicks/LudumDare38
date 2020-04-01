@@ -35,16 +35,16 @@ public class EndWayManager : MonoBehaviour
         {
             foreach(EndWayCollision endWay in _endWayList)
             {
-                if (endWay._step == EndWayStep.First)
-                    endWay.gameObject.SetActive(true);
+                if (endWay.step == EndWayStep.First)
+                    endWay.Active(true);
             }
         }
         else
         {
             foreach (EndWayCollision endWay in _endWayList)
             {
-                if (endWay._step == EndWayStep.First)
-                    endWay.gameObject.SetActive(false);
+                if (endWay.step == EndWayStep.First)
+                    endWay.Active(false);
             }
         }
 
@@ -53,16 +53,16 @@ public class EndWayManager : MonoBehaviour
         {
             foreach (EndWayCollision endWay in _endWayList)
             {
-                if (endWay._step == EndWayStep.Second)
-                    endWay.gameObject.SetActive(true);
+                if (endWay.step == EndWayStep.Second)
+                    endWay.Active(true);
             }
         }
         else
         {
             foreach (EndWayCollision endWay in _endWayList)
             {
-                if (endWay._step == EndWayStep.Second)
-                    endWay.gameObject.SetActive(false);
+                if (endWay.step == EndWayStep.Second)
+                    endWay.Active(false);
             }
         }
 
@@ -71,16 +71,16 @@ public class EndWayManager : MonoBehaviour
         {
             foreach (EndWayCollision endWay in _endWayList)
             {
-                if (endWay._step == EndWayStep.Third)
-                    endWay.gameObject.SetActive(true);
+                if (endWay.step == EndWayStep.Third)
+                    endWay.Active(true);
             }
         }
         else
         {
             foreach (EndWayCollision endWay in _endWayList)
             {
-                if (endWay._step == EndWayStep.Third)
-                    endWay.gameObject.SetActive(false);
+                if (endWay.step == EndWayStep.Third)
+                    endWay.Active(false);
             }
         }
     }

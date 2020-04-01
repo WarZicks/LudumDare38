@@ -2,19 +2,32 @@
 
 public class EndWayCollision : MonoBehaviour
 {
-    public EndWayStep _step;
+    public EndWayStep step;
+    [SerializeField] private GameObject[] _linkedRoad;
 
     private void Start()
     {
-        if (_step == EndWayStep.Zero)
-            gameObject.SetActive(true);
+        if (step == EndWayStep.Zero)
+            Active(true);
         else
-            gameObject.SetActive(false);
+            Active(false);
+    }
+
+    public void Active(bool active)
+    {
+        gameObject.SetActive(active);
+        if (_linkedRoad != null)
+        {
+            for(int i = 0; i <_linkedRoad.Length; i++)
+            {
+                _linkedRoad[i].SetActive(active);
+            }
+        }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.GetComponent<EndWayCollision>())
+        if (other.GetComponent<EndWayCollision>())
             GameManager.instance.UpdateEndWay(1);
     }
 
