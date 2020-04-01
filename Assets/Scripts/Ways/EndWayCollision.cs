@@ -4,6 +4,9 @@ public class EndWayCollision : MonoBehaviour
 {
     public EndWayStep step;
     [SerializeField] private GameObject[] _linkedRoad;
+    [HideInInspector] public bool activated { get; private set; }
+
+    public event System.Action onTriggerEndWay;
 
     private void Start()
     {
@@ -28,12 +31,20 @@ public class EndWayCollision : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.GetComponent<EndWayCollision>())
+        {
             GameManager.instance.UpdateEndWay(1);
+            activated = true;
+            onTriggerEndWay?.Invoke();
+        }
     }
 
     private void OnTriggerExit(Collider other)
     {
         if (other.GetComponent<EndWayCollision>())
+        {
             GameManager.instance.UpdateEndWay(-1);
+            activated = false;
+            onTriggerEndWay?.Invoke();
+        }
     }
 }
