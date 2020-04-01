@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44608873, g: 0.49585503, b: 0.57450616, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -635,7 +635,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1
+  m_Intensity: 1.34
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -644,9 +644,9 @@ Light:
     m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
-    m_Strength: 1
-    m_Bias: 0.05
-    m_NormalBias: 0.4
+    m_Strength: 0.584
+    m_Bias: 0.276
+    m_NormalBias: 1.39
     m_NearPlane: 0.2
     m_CullingMatrixOverride:
       e00: 1
@@ -691,13 +691,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705507993}
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalRotation: {x: 0.07789742, y: 0.8864525, z: -0.42652547, w: 0.16189505}
+  m_LocalPosition: {x: -19.5, y: 3, z: 5.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 51.39, y: 159.3, z: 0}
 --- !u!1001 &844301156
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -709,11 +709,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Planet_Level01
-      objectReference: {fileID: 0}
-    - target: {fileID: 6061587539686266428, guid: d5795f2d044e0a842901970683361355,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6061587539686266431, guid: d5795f2d044e0a842901970683361355,
         type: 3}
@@ -769,26 +764,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6252092732806468802, guid: d5795f2d044e0a842901970683361355,
-        type: 3}
-      propertyPath: _lerpSpeed
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 6252092732806468802, guid: d5795f2d044e0a842901970683361355,
-        type: 3}
-      propertyPath: RotationManager
-      value: 
-      objectReference: {fileID: 469145588}
-    - target: {fileID: 6252092732806468802, guid: d5795f2d044e0a842901970683361355,
-        type: 3}
-      propertyPath: rotationManager
-      value: 
-      objectReference: {fileID: 469145588}
-    - target: {fileID: 6479709396542337223, guid: d5795f2d044e0a842901970683361355,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5795f2d044e0a842901970683361355, type: 3}

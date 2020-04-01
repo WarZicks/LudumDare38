@@ -1,18 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class CampMesh : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void CreateNewMesh(GameObject mesh)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        GameObject go = Instantiate(mesh, this.transform);
+        go.transform.localPosition = new Vector3(.03f, 0f, .045f);
     }
 }

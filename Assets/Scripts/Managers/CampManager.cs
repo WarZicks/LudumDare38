@@ -15,4 +15,18 @@ public class CampManager : MonoBehaviour
     [SerializeField] private int _thirdCampStep;
 
     private List<CampMesh> _campList = new List<CampMesh>();
+
+    private void Awake()
+    {
+        foreach (CampMesh camp in GameObject.FindObjectsOfType<CampMesh>())
+            _campList.Add(camp);
+    }
+
+    private void Start()
+    {
+        foreach(CampMesh camp in _campList)
+        {
+            camp.CreateNewMesh(_firstCamp);
+        }
+    }
 }
