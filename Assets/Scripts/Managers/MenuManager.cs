@@ -17,6 +17,9 @@ public class MenuManager : MonoBehaviour {
     public GameObject creditsScreen;
     public GameObject loadingScreen;
 
+    [Header("Transition")]
+    [SerializeField] private Animator _cameraAnimator;
+
     // Cette variable + le code dans la fonction Awake permet de faire appel à ce script
     // depuis n'importe quel autre script dans la scène, en tapant :
     // MenuManager.s_Singleton.[NomDeLaFonctionAExecuter]()
@@ -53,8 +56,7 @@ public class MenuManager : MonoBehaviour {
     public void LoadFirstScene ()
     {
         mainMenuScreen.SetActive(false);
-        loadingScreen.SetActive(true);
-        SceneManager.LoadScene(sceneToLoadOnClickPlay);
+        StartCoroutine(LoadLevel(sceneToLoadOnClickPlay));
     }
 
     public void DisplayCreditsScreen ()
@@ -72,5 +74,14 @@ public class MenuManager : MonoBehaviour {
     public void QuitGame ()
     {
         Application.Quit();
+    }
+
+    IEnumerator LoadLevel(string index)
+    {
+        _cameraAnimator.SetTrigger("Start");
+        yield return new WaitForSeconds(1f);
+        loadingScreen.SetActive(true);
+        SceneManager.LoadScene(index);
+
     }
 }
