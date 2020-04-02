@@ -844,18 +844,6 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 6781201961482036260, guid: d5795f2d044e0a842901970683361355, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d5795f2d044e0a842901970683361355, type: 3}
---- !u!114 &889500196 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6252092732806468802, guid: d5795f2d044e0a842901970683361355,
-    type: 3}
-  m_PrefabInstance: {fileID: 844301156}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 212799513}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7207ea51727cbaf49b1be626af5981b6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &975481905 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6337982969105041543, guid: 8562aac9f296bd346acce1c037a8e32e,
@@ -1352,26 +1340,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlanetArrows
       objectReference: {fileID: 0}
-    - target: {fileID: 6337982969140142828, guid: 8562aac9f296bd346acce1c037a8e32e,
-        type: 3}
-      propertyPath: _planet
-      value: 
-      objectReference: {fileID: 889500196}
-    - target: {fileID: 6337982969422350526, guid: 8562aac9f296bd346acce1c037a8e32e,
-        type: 3}
-      propertyPath: _planet
-      value: 
-      objectReference: {fileID: 889500196}
-    - target: {fileID: 6337982970157937190, guid: 8562aac9f296bd346acce1c037a8e32e,
-        type: 3}
-      propertyPath: _planet
-      value: 
-      objectReference: {fileID: 889500196}
-    - target: {fileID: 6337982970300236015, guid: 8562aac9f296bd346acce1c037a8e32e,
-        type: 3}
-      propertyPath: _planet
-      value: 
-      objectReference: {fileID: 889500196}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8562aac9f296bd346acce1c037a8e32e, type: 3}
 --- !u!1001 &7174251452675073698
