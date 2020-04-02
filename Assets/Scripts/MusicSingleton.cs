@@ -5,10 +5,9 @@ using UnityEngine;
 public class MusicSingleton : MonoBehaviour
 {
     public static MusicSingleton instance;
-
     private void Awake()
     {
-        if(instance != null)
+        if (instance != null)
         {
             Destroy(this.gameObject);
         }
