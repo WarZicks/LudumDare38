@@ -59,8 +59,6 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 106cd00604f4a3f4c9f80d543186b1ff, type: 2}
-  - {fileID: 2100000, guid: 4ce07ef0402cdad4f83eb94473afc47f, type: 2}
-  - {fileID: 2100000, guid: 652b5629477f3f94cbe8f3819ae0df8d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -91,7 +89,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8306864877496801535}
   m_Layer: 0
-  m_Name: Camp
+  m_Name: Camp_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
