@@ -5,10 +5,23 @@ using UnityEngine;
 public class Campfire : MonoBehaviour
 {
     [SerializeField] private EndWayCollision _linkedEndWay;
+    private ParticleSystem _particles;
+    private Light _light;
+
+    private void Awake()
+    {
+        _particles = GetComponentInChildren<ParticleSystem>();
+        _light = GetComponentInChildren<Light>();
+    }
 
     private void Start()
     {
         _linkedEndWay.onTriggerEndWay += () => CheckMyEndWay();
+
+        _particles.playOnAwake = false;
+        _particles.Stop();
+
+        _light.gameObject.SetActive(false);
     }
 
     private void CheckMyEndWay()
@@ -22,10 +35,14 @@ public class Campfire : MonoBehaviour
     private void LightOn()
     {
         Debug.Log("Light on");
+        _particles.Play();
+        _light.gameObject.SetActive(true);
     }
 
     private void LightOff()
     {
         Debug.Log("Light off");
+        _particles.Stop();
+        _light.gameObject.SetActive(false);
     }
 }
