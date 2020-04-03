@@ -12,13 +12,25 @@ public enum EndWayStep
 
 public class EndWayManager : MonoBehaviour
 {
+    public static EndWayManager instance;
+
+    [Header("Steps Index")]
     [SerializeField] private int firstStepIndex;
     [SerializeField] private int secondStepIndex;
     [SerializeField] private int thirdStepIndex;
+
+    [Header("Audio Clips")]
+    public AudioClip _endWayActivatedClip;
+    public AudioClip _showNewWayClip;
+
     private List<EndWayCollision> _endWayList = new List<EndWayCollision>();
+    [HideInInspector] public AudioSource _audioSource;
 
     private void Awake()
     {
+        instance = this;
+
+        _audioSource = GetComponent<AudioSource>();
         foreach (EndWayCollision endway in GameObject.FindObjectsOfType<EndWayCollision>())
             _endWayList.Add(endway);
     }

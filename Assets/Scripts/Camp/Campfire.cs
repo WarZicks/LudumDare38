@@ -34,14 +34,12 @@ public class Campfire : MonoBehaviour
 
     private void LightOn()
     {
-        Debug.Log("Light on");
         _particles.Play();
         _light.gameObject.SetActive(true);
     }
 
     private void LightOff()
     {
-        Debug.Log("Light off");
         _particles.Stop();
         _light.gameObject.SetActive(false);
     }
