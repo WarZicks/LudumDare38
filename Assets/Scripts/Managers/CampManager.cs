@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class CampManager : MonoBehaviour
 {
+    public static CampManager instance;
+
     [Header("Camps")]
     [SerializeField] private GameObject _initialCamp;
     [SerializeField] private GameObject _firstCamp;
@@ -16,8 +18,11 @@ public class CampManager : MonoBehaviour
 
     private List<CampMesh> _campList = new List<CampMesh>();
 
+
     private void Awake()
     {
+        instance = this;
+
         foreach (CampMesh camp in GameObject.FindObjectsOfType<CampMesh>())
             _campList.Add(camp);
     }
@@ -74,6 +79,11 @@ public class CampManager : MonoBehaviour
 
                 // LAUNCH VFX & SFX
             }
+        }
+
+        if(GameManager.instance._endWayActivated == _firstCampStep || GameManager.instance._endWayActivated == _secondCampStep || GameManager.instance._endWayActivated == _thirdCampStep)
+        {
+            GetComponent<AudioSource>().Play();
         }
     }
 }

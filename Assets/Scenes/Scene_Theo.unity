@@ -335,12 +335,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _winMenu: {fileID: 1752770729}
   _planetArrows: {fileID: 975481905}
---- !u!1 &212799513 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6061587539686266428, guid: d5795f2d044e0a842901970683361355,
-    type: 3}
-  m_PrefabInstance: {fileID: 844301156}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &469145588 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4998644601995220249, guid: 9bcedd4c270d19b489a17f1ba47e5112,
@@ -359,56 +353,11 @@ PrefabInstance:
       propertyPath: faceManager
       value: 
       objectReference: {fileID: 1281060987}
-    - target: {fileID: 5945556046237419020, guid: c4cb7c8cd6ba1c34a9f634c6e8ba7902,
-        type: 3}
-      propertyPath: Planet
-      value: 
-      objectReference: {fileID: 212799513}
-    - target: {fileID: 5945556046237419020, guid: c4cb7c8cd6ba1c34a9f634c6e8ba7902,
-        type: 3}
-      propertyPath: speed
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5945556046237419020, guid: c4cb7c8cd6ba1c34a9f634c6e8ba7902,
-        type: 3}
-      propertyPath: scaleSpeed
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5945556046237419020, guid: c4cb7c8cd6ba1c34a9f634c6e8ba7902,
-        type: 3}
-      propertyPath: specificXscale
-      value: -0.7
-      objectReference: {fileID: 0}
     - target: {fileID: 5945556047048790142, guid: c4cb7c8cd6ba1c34a9f634c6e8ba7902,
         type: 3}
       propertyPath: faceManager
       value: 
       objectReference: {fileID: 1281060987}
-    - target: {fileID: 5945556047048790142, guid: c4cb7c8cd6ba1c34a9f634c6e8ba7902,
-        type: 3}
-      propertyPath: Planet
-      value: 
-      objectReference: {fileID: 212799513}
-    - target: {fileID: 5945556047048790142, guid: c4cb7c8cd6ba1c34a9f634c6e8ba7902,
-        type: 3}
-      propertyPath: speed
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5945556047048790142, guid: c4cb7c8cd6ba1c34a9f634c6e8ba7902,
-        type: 3}
-      propertyPath: actualScale
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5945556047048790142, guid: c4cb7c8cd6ba1c34a9f634c6e8ba7902,
-        type: 3}
-      propertyPath: scaleSpeed
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5945556047048790142, guid: c4cb7c8cd6ba1c34a9f634c6e8ba7902,
-        type: 3}
-      propertyPath: specificXscale
-      value: 0.7
-      objectReference: {fileID: 0}
     - target: {fileID: 5945556047284578530, guid: c4cb7c8cd6ba1c34a9f634c6e8ba7902,
         type: 3}
       propertyPath: m_Name
@@ -518,21 +467,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5945556047284578534, guid: c4cb7c8cd6ba1c34a9f634c6e8ba7902,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5945556047284578534, guid: c4cb7c8cd6ba1c34a9f634c6e8ba7902,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5945556047284578534, guid: c4cb7c8cd6ba1c34a9f634c6e8ba7902,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4cb7c8cd6ba1c34a9f634c6e8ba7902, type: 3}
@@ -1459,21 +1393,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: WinMenu
       objectReference: {fileID: 0}
-    - target: {fileID: 7174251451206471179, guid: b82a27fbf00d1094583f152241e6db42,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7174251452501935789, guid: b82a27fbf00d1094583f152241e6db42,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 189529581}
-    - target: {fileID: 7174251452501935789, guid: b82a27fbf00d1094583f152241e6db42,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: NextLevel
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b82a27fbf00d1094583f152241e6db42, type: 3}
 --- !u!1001 &8728001075063051951

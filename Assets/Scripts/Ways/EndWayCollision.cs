@@ -21,10 +21,16 @@ public class EndWayCollision : MonoBehaviour
         gameObject.SetActive(active);
         if (_linkedRoad != null)
         {
-            for(int i = 0; i <_linkedRoad.Length; i++)
+            for (int i = 0; i < _linkedRoad.Length; i++)
             {
                 _linkedRoad[i].SetActive(active);
             }
+        }
+
+        if(active)
+        {
+            EndWayManager.instance._audioSource.clip = EndWayManager.instance._showNewWayClip;
+            EndWayManager.instance._audioSource.Play();
         }
     }
 
@@ -32,6 +38,12 @@ public class EndWayCollision : MonoBehaviour
     {
         if (other.GetComponent<EndWayCollision>())
         {
+            if (!CampManager.instance.GetComponent<AudioSource>().isPlaying)
+            {
+                EndWayManager.instance.GetComponent<AudioSource>().clip = EndWayManager.instance._endWayActivatedClip;
+                EndWayManager.instance.GetComponent<AudioSource>().Play();
+            }
+
             GameManager.instance.UpdateEndWay(1);
             activated = true;
             onTriggerEndWay?.Invoke();
