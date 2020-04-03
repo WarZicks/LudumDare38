@@ -38,10 +38,10 @@ public class EndWayCollision : MonoBehaviour
     {
         if (other.GetComponent<EndWayCollision>())
         {
-            if (!CampManager.instance.GetComponent<AudioSource>().isPlaying)
+            if (!CampManager.instance.GetComponent<AudioSource>().isPlaying && !EndWayManager.instance._audioSource.isPlaying)
             {
-                EndWayManager.instance.GetComponent<AudioSource>().clip = EndWayManager.instance._endWayActivatedClip;
-                EndWayManager.instance.GetComponent<AudioSource>().Play();
+                EndWayManager.instance._audioSource.clip = EndWayManager.instance._endWayActivatedClip;
+                EndWayManager.instance._audioSource.Play();
             }
 
             GameManager.instance.UpdateEndWay(1);

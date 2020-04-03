@@ -81,7 +81,7 @@ public class CampManager : MonoBehaviour
             }
         }
 
-        if(GameManager.instance._endWayActivated == _firstCampStep || GameManager.instance._endWayActivated == _secondCampStep || GameManager.instance._endWayActivated == _thirdCampStep)
+        if((GameManager.instance._endWayActivated == _firstCampStep || GameManager.instance._endWayActivated == _secondCampStep || GameManager.instance._endWayActivated == _thirdCampStep) && !GetComponent<AudioSource>().isPlaying)
         {
             GetComponent<AudioSource>().Play();
         }
