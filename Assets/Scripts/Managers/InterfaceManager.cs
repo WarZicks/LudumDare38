@@ -30,7 +30,7 @@ public class InterfaceManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && !_winMenu.activeSelf)
         {
             GetComponent<AudioSource>().Play();
             TogglePauseMenu();

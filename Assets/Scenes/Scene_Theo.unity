@@ -943,16 +943,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Camera
       objectReference: {fileID: 0}
-    - target: {fileID: 2480202197692476514, guid: e0529fb05a4c61b42905c34bfa48b4e5,
-        type: 3}
-      propertyPath: m_ClearFlags
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2480202197692476514, guid: e0529fb05a4c61b42905c34bfa48b4e5,
-        type: 3}
-      propertyPath: m_OcclusionCulling
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2480202197692476517, guid: e0529fb05a4c61b42905c34bfa48b4e5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -961,7 +951,7 @@ PrefabInstance:
     - target: {fileID: 2480202197692476517, guid: e0529fb05a4c61b42905c34bfa48b4e5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.65
+      value: 5.24
       objectReference: {fileID: 0}
     - target: {fileID: 2480202197692476517, guid: e0529fb05a4c61b42905c34bfa48b4e5,
         type: 3}
@@ -1010,43 +1000,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e0529fb05a4c61b42905c34bfa48b4e5, type: 3}
---- !u!1 &2118523186 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2480202197692476512, guid: e0529fb05a4c61b42905c34bfa48b4e5,
-    type: 3}
-  m_PrefabInstance: {fileID: 2118523185}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2118523187
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2118523186}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_RenderShadows: 1
-  m_RequiresDepthTextureOption: 2
-  m_RequiresOpaqueTextureOption: 2
-  m_CameraType: 0
-  m_CameraOutput: 0
-  m_Cameras: []
-  m_RendererIndex: -1
-  m_VolumeLayerMask:
-    serializedVersion: 2
-    m_Bits: 1
-  m_VolumeTrigger: {fileID: 0}
-  m_RenderPostProcessing: 1
-  m_Antialiasing: 1
-  m_AntialiasingQuality: 2
-  m_StopNaN: 0
-  m_Dithering: 0
-  m_RequiresDepthTexture: 0
-  m_RequiresColorTexture: 0
-  m_Version: 2
 --- !u!1001 &206304627746145021
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1384,11 +1337,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlanetArrows
-      objectReference: {fileID: 0}
-    - target: {fileID: 6337982969105041543, guid: 8562aac9f296bd346acce1c037a8e32e,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8562aac9f296bd346acce1c037a8e32e, type: 3}
