@@ -3,7 +3,7 @@
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-    private int _endWayCount;
+    public int _endWayCount { get; private set;}
     public int _endWayActivated { get; private set;}
 
     public event System.Action onUpdateEndWay;
