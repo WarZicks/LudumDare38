@@ -600,7 +600,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hideMouseCursor: 0
-  sceneToLoadOnClickPlay: Scene_Theo
+  sceneToLoadOnClickPlay: World_01
   mainMenuScreen: {fileID: 1530174060288062}
   creditsScreen: {fileID: 1373867956107604}
   loadingScreen: {fileID: 1353252393488272}

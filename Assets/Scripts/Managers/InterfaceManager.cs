@@ -66,8 +66,8 @@ public class InterfaceManager : MonoBehaviour
     public void TogglePauseMenu()
     {
         _togglePauseMenu = !_togglePauseMenu;
-        _planetArrows.SetActive(_togglePauseMenu);
-        _pauseMenu.SetActive(!_togglePauseMenu);
+        _planetArrows.SetActive(!_togglePauseMenu);
+        _pauseMenu.SetActive(_togglePauseMenu);
     }
 
     public void GoToMenu()
