@@ -16,12 +16,14 @@ public class Campfire : MonoBehaviour
 
     private void Start()
     {
-        _linkedEndWay.onTriggerEndWay += () => CheckMyEndWay();
-
         _particles.playOnAwake = false;
+        _particles.loop = false;
         _particles.Stop();
 
         _light.gameObject.SetActive(false);
+
+        _linkedEndWay.onTriggerEndWay += () => CheckMyEndWay();
+
     }
 
     private void CheckMyEndWay()
@@ -35,12 +37,14 @@ public class Campfire : MonoBehaviour
     private void LightOn()
     {
         _particles.Play();
+        _particles.loop = true;
         _light.gameObject.SetActive(true);
     }
 
     private void LightOff()
     {
         _particles.Stop();
+        _particles.loop = false;
         _light.gameObject.SetActive(false);
     }
 }
