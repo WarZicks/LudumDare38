@@ -14,8 +14,8 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_Fog: 0
-  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_Fog: 1
+  m_FogColor: {r: 0.7254902, g: 0.7254902, b: 0.7254902, a: 1}
   m_FogMode: 3
   m_FogDensity: 0.01
   m_LinearFogStart: 0
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.36311284, g: 0.5662618, b: 0.84370005, a: 1}
+  m_IndirectSpecularColor: {r: 0.36294773, g: 0.5662003, b: 0.84370816, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -351,6 +351,8 @@ MonoBehaviour:
   _winMenu: {fileID: 1752770729}
   _planetArrows: {fileID: 975481905}
   _pauseMenu: {fileID: 185260865}
+  _planetName: {fileID: 0}
+  _tuto: {fileID: 0}
 --- !u!82 &189529582
 AudioSource:
   m_ObjectHideFlags: 0
