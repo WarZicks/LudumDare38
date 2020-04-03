@@ -12,6 +12,8 @@ public class InterfaceManager : MonoBehaviour
     [SerializeField] private GameObject _winMenu;
     [SerializeField] private GameObject _planetArrows;
     [SerializeField] private GameObject _pauseMenu;
+    [SerializeField] private GameObject _planetName;
+    [SerializeField] private GameObject _tuto;
 
     private bool _togglePauseMenu = false;
 
@@ -26,6 +28,8 @@ public class InterfaceManager : MonoBehaviour
         _winMenu.SetActive(false);
         _pauseMenu.SetActive(false);
         _planetArrows.SetActive(true);
+        _planetName.SetActive(true);
+        _tuto.SetActive(true);
     }
 
     private void Update()
@@ -41,6 +45,8 @@ public class InterfaceManager : MonoBehaviour
     {
         ActiveObject(_winMenu, true, .5f);
         ActiveObject(_planetArrows, false, .5f);
+        ActiveObject(_planetName, false, .5f);
+        ActiveObject(_tuto, false, .5f);
     }
 
     public void ActiveObject(GameObject go, bool active, float delay = 0f)
@@ -67,6 +73,8 @@ public class InterfaceManager : MonoBehaviour
     {
         _togglePauseMenu = !_togglePauseMenu;
         _planetArrows.SetActive(!_togglePauseMenu);
+        _planetName.SetActive(!_togglePauseMenu);
+        _tuto.SetActive(!_togglePauseMenu);
         _pauseMenu.SetActive(_togglePauseMenu);
     }
 
